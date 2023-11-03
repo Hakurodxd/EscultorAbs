@@ -1,0 +1,12 @@
+putEllipsoid 50 50 50 40 2 30 130 0 15 1.0
+putEllipsoid 50 50 50 30 26 2 130 0 15 1.0
+putEllipsoid 50 50 50 35 2 27 220 70 20 1.0
+putEllipsoid 50 50 50 30 24 2 220 70 20 1.0
+putEllipsoid 50 50 50 30 2 24 210 100 0 1.0
+putEllipsoid 50 50 50 29 22 2 210 100 0 1.0
+putEllipsoid 50 50 50 25 2 21 205 130 60 1.0
+putEllipsoid 50 50 50 25 20 2 205 130 60 1.0
+putEllipsoid 50 50 50 20 2 18 245 235 180 1.0
+putEllipsoid 50 50 50 20 18 2 245 235 180 1.0
+putSphere 50 50 50 15 0 0 0 1.0
+cutSphere 50 50 50 14 0 0 0 1.0

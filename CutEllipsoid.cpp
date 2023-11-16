@@ -2,6 +2,8 @@
 #include <iostream>
 #include "FigGeometrica.h"
 
+/**Inicialização da classe CutEllipsoid através do metodo construtor.
+*/
 cutEllipsoid::cutEllipsoid(int xcenter_, int ycenter_, int zcenter_, int rx_, int ry_, int rz_){
   xcenter = xcenter_;
   ycenter = ycenter_;
@@ -12,6 +14,8 @@ cutEllipsoid::cutEllipsoid(int xcenter_, int ycenter_, int zcenter_, int rx_, in
 
 }
 
+/**Classe CutEllipsoid, com a função de apagar uma elipse de voxels da matriz 3D, utilizando o metodo draw e a equação da elipse para identificar quais os elementos devem ser apagados.
+*/
 void cutEllipsoid::draw(Sculptor &t){
   for (int i = xcenter - rx; i <= xcenter + rx; i++) {
       for (int j = ycenter - ry; j <= ycenter + ry; j++) {

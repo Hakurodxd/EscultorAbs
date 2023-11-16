@@ -69,7 +69,8 @@
   */
   void Sculptor::writeOFF(const char* filename){
 
-    //Abertura do arquivo informado.
+    /**Abertura do arquivo informado.
+    */
     std::ofstream fout(filename);
 
     if (!fout.is_open()) {
@@ -77,7 +78,8 @@
         return;
     }
 
-    //Declaração e contagem do número vértices e faces presentes na escultura
+    /**Declaração e contagem do número vértices e faces presentes na escultura.
+    */
     int nVertices = 0;
     int nFaces = 0;
 
@@ -92,11 +94,13 @@
         }
     }
 
-    //Cabecalho do arquivo .off.
+    /**Cabecalho do arquivo .off.
+    */
     fout << "OFF\n";
     fout << nVertices << " " << nFaces << " 0\n";
 
-    //Loop responsável por gerar os vértices e informar as cores dos voxels.
+    /**Loop responsável por gerar os vértices e informar as cores dos voxels.
+    */
     for (int i = 0; i < nx; i++) {
         for (int j = 0; j < ny; j++) {
             for (int k = 0; k < nz; k++) {
@@ -128,7 +132,8 @@
         }
     }
 
-    //Ultima parte do arquivo, que define as conexões entre os vértices, gerando as faces.
+    /**Ultima parte do arquivo, que define as conexões entre os vértices, gerando as faces.
+    */
     int vertice0 = 0;
     for (int i = 0; i < nx; i++) {
         for (int j = 0; j < ny; j++) {
@@ -145,6 +150,7 @@
             }
         }
     }
-  //Fechamento do arquivo.
+  /**Fechamento do arquivo.
+  */
     fout.close();
   }

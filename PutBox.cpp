@@ -2,6 +2,8 @@
 #include <iostream>
 #include "FigGeometrica.h"
 
+/**Inicialização da classe PutBox através do metodo construtor.
+*/
 putBox::putBox(int x0_, int x1_, int y0_, int y1_, int z0_, int z1_, float r_, float g_, float b_, float a_){
   x0 = x0_;
   y0 = y0_;
@@ -14,7 +16,8 @@ putBox::putBox(int x0_, int x1_, int y0_, int y1_, int z0_, int z1_, float r_, f
   b = b_;
   a = a_;
 }
-
+/**Implementação do metodo Draw para desenhar uma caixa nas coordenadas determinadas, utilizando tambem, o putVoxel da classe Sculptor.
+*/
 void putBox::draw(Sculptor &t){
   t.setColor(r, g, b, a);
   for(int i=x0; i<=x1; i++){

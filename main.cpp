@@ -15,13 +15,18 @@
 #include "PutVoxel.h"
 
 int main() {
-
+  /**Criação da matriz 3D, do tipo Sculptor, com 100x100x100 voxels.
+    */
   Sculptor* blackhole;
   blackhole = new Sculptor(100, 100, 100);
   
+  /**Utilizando Vector para criar uma variavel responsavel por armazenar as figuras geométricas, lidas a partir do arquivos de instruções.
+  */
   std::vector<FigGeometrica *> figs;
   std::ifstream fin;
 
+  /**Abertura do arquivo "teste.txt", contendo as instruções para desenho da figura e sua leitura para indentificar cada classe a ser utilizada.
+  */
   fin.open("teste.txt");
   if (!fin.is_open()) {
     return 0;
@@ -84,12 +89,18 @@ int main() {
     }
   }
 
+  /**Desenho da figura 3D com as instruções lidas do arquivo txt.
+  */
   for (size_t x=0; x<figs.size(); x++){
       figs[x] -> draw(*blackhole);
   }
-  
+
+  /**Criação do arquivo OFF utilizando o metodo da classe Sculptor.
+  */
   blackhole -> writeOFF("blackhole.off"); 
 
+  /**Liberação do vetor figs.
+  */
   for(size_t x=0; x<figs.size(); x++){
     delete figs[x];
   }

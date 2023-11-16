@@ -2,6 +2,8 @@
 #include <iostream>
 #include "FigGeometrica.h"
 
+/**Inicialização da classe CutSphere através do metodo construtor.
+*/
 cutSphere::cutSphere(int xcenter_, int ycenter_, int zcenter_, int radius_){
   xcenter = xcenter_;
   ycenter = ycenter_;
@@ -9,6 +11,8 @@ cutSphere::cutSphere(int xcenter_, int ycenter_, int zcenter_, int radius_){
   radius = radius_;
 }
 
+/**Classe CutSphere, com a função de apagar uma esfera de voxels da matriz 3D, através do metodo cutVoxel da classe Sculptor, utilizando tambem a equação da esfera.
+*/
 void cutSphere::draw(Sculptor &t){
   for (int i = xcenter - radius; i <= xcenter + radius; i++) {
       for (int j = ycenter - radius; j <= ycenter + radius; j++) {
